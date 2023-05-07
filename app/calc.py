@@ -1,4 +1,5 @@
 import app
+import math
 
 
 class InvalidPermissions(Exception):
@@ -32,9 +33,19 @@ class Calculator:
         self.check_types(x, y)
         return x ** y
 
+    def square_root(self,x):
+        self.check_types(x)
+        return math.sqrt(x)
+        
+    def logbase10(self,x)
+        self.check_types(x)
+        return math.log10()
+
     def check_types(self, x, y):
         if not isinstance(x, (int, float)) or not isinstance(y, (int, float)):
             raise TypeError("Parameters must be numbers")
+    
+
 
 
 if __name__ == "__main__":  # pragma: no cover
